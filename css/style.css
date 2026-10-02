@@ -316,7 +316,8 @@ body { overflow-x: hidden; }
 }
 @media (max-width: 700px) {
   body { font-size: 16px; }
-  .topo nav a:not(.btn) { display: none; }
+  .topo nav a:not(.btn):not(.nav-fixo) { display: none; }
+  .topo nav { gap: 14px; }
   .numeros { grid-template-columns: repeat(2, 1fr); margin: -28px 16px 0; }
   .numeros:not(.tres) > div:nth-child(3) { border-left: 0; }
   .numeros:not(.tres) > div:nth-child(n+3) { border-top: 1px solid rgba(255, 255, 255, .12); }
@@ -343,7 +344,15 @@ body { overflow-x: hidden; }
 }
 
 /* ---------- artigos ---------- */
-.artigos-sec { padding: 0 0 88px; }
+.artigos-sec { padding: 80px 0 24px; }
+.artigos-cab { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; }
+.artigos-cab h2 { margin-bottom: .2em; }
+.artigos-cab .sub { margin: 0; }
+.cartao-artigo.destaque { background: var(--amarelo); padding: 32px; grid-column: 1 / -1; box-shadow: 7px 7px 0 var(--tinta); }
+.cartao-artigo.destaque h3 { font-size: clamp(1.7rem, 4vw, 2.4rem); max-width: 22em; }
+.cartao-artigo.destaque p { color: var(--tinta); font-size: 1.1rem; max-width: 40em; }
+.cartao-artigo.destaque .etiqueta { background: var(--creme); border: 2px solid var(--tinta); }
+.ler-mais { display: inline-block; margin-top: 16px; font-weight: 800; border-bottom: 3px solid var(--tinta); }
 .lista-artigos { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; margin-top: 24px; }
 .cartao-artigo {
   display: block; padding: 24px; background: var(--branco); text-decoration: none;
@@ -375,3 +384,15 @@ body { overflow-x: hidden; }
 .artigo summary { font-weight: 800; cursor: pointer; }
 .cta-artigo { margin-top: 48px; padding: 28px; background: var(--amarelo); border: 2px solid var(--tinta); border-radius: var(--raio); box-shadow: 6px 6px 0 var(--tinta); }
 .cta-artigo h2 { margin-top: 0; font-size: 1.8rem; }
+
+@media (max-width: 700px) {
+  .artigos-sec { padding-top: 56px; }
+  .cartao-artigo.destaque { padding: 22px; }
+}
+
+.historia-cta { margin: 32px 0 0; }
+
+.foto-artigo { margin: 26px 0; }
+.foto-artigo img { width: 100%; height: auto; border: 2px solid var(--tinta); border-radius: var(--raio); box-shadow: 6px 6px 0 var(--tinta); }
+.foto-vertical img { max-width: 420px; margin: 0 auto; }
+.foto-artigo figcaption { margin-top: 12px; text-align: center; font-size: .95rem; font-weight: 700; color: var(--tinta-suave); }
