@@ -49,7 +49,6 @@
   $("#nTotal").textContent = TOTAL_ANIMAIS;
   document.querySelectorAll(".n-esp").forEach((d) => (d.hidden = true));
   $(".n-fotos").hidden = false;
-  $("#nFotos").textContent = FOTOS.length;
   $(".numeros").classList.add("tres");
   document.querySelector(".selo").textContent = `${TOTAL_ANIMAIS} resgatados · 2 humanos · 1 lar`;
 
