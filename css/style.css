@@ -396,3 +396,11 @@ body { overflow-x: hidden; }
 .foto-artigo img { width: 100%; height: auto; border: 2px solid var(--tinta); border-radius: var(--raio); box-shadow: 6px 6px 0 var(--tinta); }
 .foto-vertical img { max-width: 420px; margin: 0 auto; }
 .foto-artigo figcaption { margin-top: 12px; text-align: center; font-size: .95rem; font-weight: 700; color: var(--tinta-suave); }
+
+.cartao-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; border: 2px solid var(--tinta); margin-bottom: 14px; }
+.cartao-artigo.destaque { display: grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; }
+.cartao-artigo.destaque > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; border: 2px solid var(--tinta); }
+@media (max-width: 800px) {
+  .cartao-artigo.destaque { grid-template-columns: 1fr; gap: 18px; }
+  .cartao-artigo.destaque > img { order: -1; }
+}
