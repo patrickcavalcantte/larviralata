@@ -17,4 +17,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://larviralata.com.br/sitemap.xml
+Sitemap: https://www.larviralata.com.br/sitemap.xml
