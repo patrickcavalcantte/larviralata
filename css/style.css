@@ -406,6 +406,6 @@ body { overflow-x: hidden; }
 }
 
 /* foto do cartão: o atributo height do <img> estava esticando a imagem */
-.cartao-artigo.destaque > img { height: 260px; aspect-ratio: auto; object-position: 50% 40%; }
+.cartao-artigo.destaque > img { height: 260px; aspect-ratio: auto; object-position: 50% 50%; }
 .cartao-img { height: 200px; aspect-ratio: auto; }
 @media (max-width: 800px) { .cartao-artigo.destaque > img { height: 220px; } }
