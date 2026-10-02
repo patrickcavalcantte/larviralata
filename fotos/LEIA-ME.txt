@@ -1,0 +1,13 @@
+COMO ADICIONAR FOTOS
+====================
+
+1. Coloque as fotos novas nesta pasta (jpg, png ou webp), sem apagar as antigas.
+2. Na pasta do site, rode:   python atualizar-fotos.py
+   Isso cria as versões leves (fotos/web) e atualiza a galeria sozinho.
+3. Publique o site de novo.
+
+Não tem nome de bicho nem lista para editar: toda foto da pasta entra na galeria,
+das mais recentes para as mais antigas (pela data no nome do arquivo).
+
+O número de resgatados (18) fica em js/dados.js (TOTAL_ANIMAIS).
+A foto grande do topo é FOTO_CAPA, no mesmo arquivo.

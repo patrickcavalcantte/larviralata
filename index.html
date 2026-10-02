@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lar Vira-Lata</title>
+  <meta name="description" content="18 animais resgatados, cuidados por um casal. Apoie com Pix mensal.">
+  <meta property="og:title" content="Lar Vira-Lata">
+  <meta property="og:description" content="18 animais resgatados, cuidados só por nós dois. Seja um apoiador fixo.">
+  <meta name="theme-color" content="#FFC629">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23FFC629'/><g fill='%232A1E14'><ellipse cx='50' cy='64' rx='17' ry='14'/><circle cx='28' cy='42' r='8'/><circle cx='42' cy='30' r='8'/><circle cx='58' cy='30' r='8'/><circle cx='72' cy='42' r='8'/></g></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="pata" viewBox="0 0 100 100">
+      <ellipse cx="50" cy="66" rx="19" ry="16"/>
+      <ellipse cx="24" cy="42" rx="9" ry="11" transform="rotate(-20 24 42)"/>
+      <ellipse cx="40" cy="26" rx="9" ry="12" transform="rotate(-8 40 26)"/>
+      <ellipse cx="60" cy="26" rx="9" ry="12" transform="rotate(8 60 26)"/>
+      <ellipse cx="76" cy="42" rx="9" ry="11" transform="rotate(20 76 42)"/>
+    </symbol>
+  </svg>
+
+  <header class="topo">
+    <a href="#" class="marca">
+      <svg class="marca-pata"><use href="#pata"/></svg>
+      Lar Vira-Lata
+    </a>
+    <nav>
+      <a href="#historia">Nossa história</a>
+      <a href="#mural">Fotos</a>
+      <a href="#apoie" class="btn btn-escuro btn-peq">Apoie</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-texto">
+        <p class="selo">18 resgatados · 2 humanos · 1 lar</p>
+        <h1>Lar <span>Vira-Lata</span></h1>
+        <p class="lead">
+          Todos os bichos daqui foram resgatados da rua, do abandono ou de maus-tratos.
+          Hoje eles têm casa, comida, remédio e colo. Quem banca tudo isso é um casal
+          CLT, com um financiamento imobiliário gigante para pagar, porque precisávamos
+          de uma casa grande para dar a eles todo o conforto que merecem.
+        </p>
+        <div class="hero-acoes">
+          <a href="#apoie" class="btn btn-escuro">Quero apoiar todo mês</a>
+          <a href="#mural" class="btn btn-claro">Ver as fotos</a>
+        </div>
+      </div>
+      <div class="hero-foto" id="heroFoto">
+        <div class="mosaico" id="mosaico"></div>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="numeros">
+      <div><strong id="nTotal">18</strong><span>animais resgatados</span></div>
+      <div class="n-esp"><strong id="nCaes">–</strong><span>cães</span></div>
+      <div class="n-esp"><strong id="nGatos">–</strong><span>gatos</span></div>
+      <div class="n-fotos" hidden><strong id="nFotos">–</strong><span>fotos no mural</span></div>
+      <div><strong>2</strong><span>pessoas cuidando de tudo</span></div>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section class="historia" id="historia">
+      <div class="cont estreito">
+        <h2>Nenhum deles foi comprado.<br>Todos foram <em>resgatados</em>.</h2>
+        <p>
+          Não somos ONG, não temos sede nem patrocínio. Somos um casal que não conseguiu
+          passar reto por um animal precisando de ajuda. Nosso trabalho era resgatar,
+          castrar e doar, mas os animais para os quais não conseguimos adotantes foram
+          ficando, e assim chegamos aos 18.
+        </p>
+        <p>
+          Cada um chegou com uma história difícil. Aqui eles foram tratados, castrados,
+          ganharam um nome e muito amor. Não estão para adoção: esta é a casa deles para sempre.
+        </p>
+        <p>
+          Todo o custo — ração, areia, veterinário, vacinas, remédios e emergências — sai do
+          nosso bolso. Por isso pedimos ajuda: um <strong>apoio fixo mensal</strong>, de
+          qualquer valor, nos dá previsibilidade para continuar cuidando de todos com dignidade.
+        </p>
+
+        <ul class="gastos">
+          <li><svg><use href="#pata"/></svg>Ração e areia</li>
+          <li><svg><use href="#pata"/></svg>Veterinário e exames</li>
+          <li><svg><use href="#pata"/></svg>Vacinas e vermífugos</li>
+          <li><svg><use href="#pata"/></svg>Remédios contínuos</li>
+          <li><svg><use href="#pata"/></svg>Castrações</li>
+          <li><svg><use href="#pata"/></svg>Emergências</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MURAL -->
+    <section class="mural-sec" id="mural">
+      <div class="cont">
+        <h2>Dia a dia no lar</h2>
+        <p class="sub">Soneca, bagunça e muito colo. É para isso que sua ajuda vai. Toque numa foto para ampliar.</p>
+        <div class="mural" id="muralGrade"></div>
+      </div>
+    </section>
+
+    <!-- APOIE -->
+    <section class="apoie" id="apoie">
+      <div class="cont apoie-grid">
+        <div class="apoie-texto">
+          <h2>Seja um apoiador fixo</h2>
+          <p>
+            Uma doação mensal, mesmo pequena, vale muito: é ela que garante a ração
+            do mês e o veterinário quando alguém fica doente.
+          </p>
+          <ol class="passos">
+            <li>Escolha um valor abaixo (ou qualquer outro).</li>
+            <li>Copie o código Pix ou leia o QR Code no app do banco.</li>
+            <li>No app, marque <strong>“agendar / repetir todo mês”</strong> — a maioria dos bancos tem essa opção no Pix.</li>
+          </ol>
+          <p class="obrigado">Se puder, mande um oi pra gente saber quem você é e agradecer. 💛</p>
+          <div class="contatos" id="contatos"></div>
+        </div>
+
+        <div class="pix-card">
+          <p class="pix-rotulo">Apoio mensal</p>
+          <div class="valores" id="valores"></div>
+          <div class="qr" id="qr"></div>
+          <p class="pix-chave-rotulo">Chave Pix</p>
+          <p class="pix-chave" id="pixChave"></p>
+          <button class="btn btn-escuro btn-largo" id="copiarCodigo">Copiar Pix copia e cola</button>
+          <button class="btn btn-linha btn-largo" id="copiarChave">Copiar só a chave</button>
+          <p class="pix-titular" id="pixTitular"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <svg class="marca-pata"><use href="#pata"/></svg>
+    <p><strong>Lar Vira-Lata</strong> — 18 resgatados, cuidados com amor por um casal.</p>
+    <p class="peq">Obrigado por chegar até aqui.</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lb-caixa" role="dialog" aria-modal="true" aria-labelledby="lbNome">
+      <button class="lb-fechar" id="lbFechar" aria-label="Fechar">×</button>
+      <div class="lb-foto">
+        <button class="lb-nav lb-ant" id="lbAnt" aria-label="Foto anterior">‹</button>
+        <img id="lbImg" alt="">
+        <button class="lb-nav lb-prox" id="lbProx" aria-label="Próxima foto">›</button>
+        <span class="lb-cont" id="lbCont"></span>
+      </div>
+      <div class="lb-info">
+        <h3 id="lbNome"></h3>
+        <p id="lbHistoria"></p>
+        <div class="lb-miniaturas" id="lbMini"></div>
+        <a href="#apoie" class="btn btn-escuro" id="lbApoiar">Apoiar a turma</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/fotos.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
