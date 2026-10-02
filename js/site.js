@@ -86,6 +86,23 @@
       );
       muralGrade.appendChild(b);
     });
+
+    // setas: andam uma "página" de fotos por vez
+    const ant = $("#carAnt"), prox = $("#carProx"), info = $("#carInfo");
+    const passo = () => muralGrade.clientWidth * 0.9;
+    const atualizar = () => {
+      const max = muralGrade.scrollWidth - muralGrade.clientWidth - 2;
+      ant.disabled = muralGrade.scrollLeft <= 2;
+      prox.disabled = muralGrade.scrollLeft >= max;
+      const w = muralGrade.firstChild.offsetWidth + 14;
+      const n = Math.min(ok.length, Math.round(muralGrade.scrollLeft / w) + 1);
+      info.textContent = `${n} / ${ok.length} fotos`;
+    };
+    ant.addEventListener("click", () => muralGrade.scrollBy({ left: -passo() }));
+    prox.addEventListener("click", () => muralGrade.scrollBy({ left: passo() }));
+    muralGrade.addEventListener("scroll", atualizar, { passive: true });
+    window.addEventListener("resize", atualizar);
+    atualizar();
   });
 
   /* ---------- lightbox ---------- */

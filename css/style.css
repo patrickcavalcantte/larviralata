@@ -136,18 +136,32 @@ body { overflow-x: hidden; }
 }
 .gastos svg { width: 1.2em; height: 1.2em; fill: var(--amarelo-forte); flex: none; }
 
-/* ---------- mural ---------- */
+/* ---------- mural (carrossel) ---------- */
 .mural-sec { padding: 0 0 88px; }
-.mural { columns: 4 240px; column-gap: 14px; }
-.mural button {
-  display: block; width: 100%; margin: 0 0 14px; padding: 0; cursor: zoom-in;
-  break-inside: avoid; border: 2px solid var(--tinta); border-radius: 18px; overflow: hidden;
-  background: var(--amarelo-claro); transition: transform .18s, box-shadow .18s;
+.carrossel { position: relative; margin-top: 24px; }
+.mural {
+  display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; scrollbar-width: none; padding: 6px 4px 14px;
 }
-.mural button:nth-child(3n+1) { transform: rotate(-.8deg); }
-.mural button:nth-child(3n+2) { transform: rotate(.6deg); }
-.mural button:hover, .mural button:focus-visible { transform: rotate(0) scale(1.02); box-shadow: 5px 5px 0 var(--amarelo-forte); outline: none; }
-.mural img { width: 100%; height: auto; }
+.mural::-webkit-scrollbar { display: none; }
+.mural button {
+  flex: 0 0 calc((100% - 28px) / 3); height: 420px; scroll-snap-align: start;
+  padding: 0; border: 2px solid var(--tinta); border-radius: 18px; overflow: hidden;
+  background: var(--amarelo-claro); box-shadow: 4px 4px 0 var(--tinta); cursor: zoom-in;
+  transition: transform .2s, box-shadow .2s;
+}
+.mural button:hover, .mural button:focus-visible { transform: translateY(-3px); box-shadow: 6px 6px 0 var(--amarelo-forte); outline: none; }
+.mural img { width: 100%; height: 100%; object-fit: cover; }
+.car-seta {
+  position: absolute; top: calc(50% - 26px); z-index: 2; width: 52px; height: 52px; border-radius: 50%;
+  border: 2px solid var(--tinta); background: var(--amarelo); color: var(--tinta);
+  font: 800 1.8rem/1 var(--texto); cursor: pointer; box-shadow: 3px 3px 0 var(--tinta);
+}
+.car-seta:hover { background: var(--creme); }
+.car-seta:disabled { opacity: .35; cursor: default; }
+.car-ant { left: -14px; }
+.car-prox { right: -14px; }
+.car-info { text-align: center; font-weight: 800; color: var(--tinta-suave); margin: 4px 0 0; }
 
 /* ---------- turma ---------- */
 .turma { padding: 72px 0 96px; background: var(--branco); border-top: 2px solid var(--tinta); border-bottom: 2px solid var(--tinta); }
@@ -311,8 +325,11 @@ body { overflow-x: hidden; }
   .numeros.tres strong { font-size: 2rem; }
   .numeros.tres span { font-size: .8rem; display: block; line-height: 1.3; }
   .grade { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .mural { columns: 2; column-gap: 10px; }
-  .mural button { margin-bottom: 10px; }
+  .mural { gap: 10px; }
+  .mural button { flex-basis: 78%; height: 380px; }
+  .car-seta { width: 44px; height: 44px; top: calc(50% - 22px); }
+  .car-ant { left: 4px; }
+  .car-prox { right: 4px; }
   .card-info { padding: 10px 12px 12px; }
   .card-info h3 { font-size: 1.1rem; }
   .historia, .apoie { padding: 64px 0; }

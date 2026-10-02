@@ -17,4 +17,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://patrickcavalcantte.github.io/larviralata/sitemap.xml
+Sitemap: https://larviralata.com.br/sitemap.xml

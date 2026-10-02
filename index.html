@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lar Vira-Lata — 18 animais resgatados e um casal que cuida de todos</title>
   <meta name="description" content="Casal que cuida de 18 cães e gatos resgatados. Veja a turma, leia guias sobre resgate e cuidado de animais e apoie com Pix mensal.">
-  <link rel="canonical" href="https://patrickcavalcantte.github.io/larviralata/">
+  <link rel="canonical" href="https://larviralata.com.br/">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Lar Vira-Lata">
   <meta property="og:title" content="Lar Vira-Lata — 18 animais resgatados">
   <meta property="og:description" content="Todos resgatados, nenhum comprado. Conheça a turma e seja um apoiador fixo.">
-  <meta property="og:url" content="https://patrickcavalcantte.github.io/larviralata/">
-  <meta property="og:image" content="https://patrickcavalcantte.github.io/larviralata/og.jpg">
+  <meta property="og:url" content="https://larviralata.com.br/">
+  <meta property="og:image" content="https://larviralata.com.br/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
@@ -24,18 +24,18 @@
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://patrickcavalcantte.github.io/larviralata/#site",
+        "@id": "https://larviralata.com.br/#site",
         "name": "Lar Vira-Lata",
-        "url": "https://patrickcavalcantte.github.io/larviralata/",
+        "url": "https://larviralata.com.br/",
         "inLanguage": "pt-BR"
       },
       {
         "@type": "Organization",
-        "@id": "https://patrickcavalcantte.github.io/larviralata/#org",
+        "@id": "https://larviralata.com.br/#org",
         "name": "Lar Vira-Lata",
-        "url": "https://patrickcavalcantte.github.io/larviralata/",
-        "logo": "https://patrickcavalcantte.github.io/larviralata/og.jpg",
-        "image": "https://patrickcavalcantte.github.io/larviralata/og.jpg",
+        "url": "https://larviralata.com.br/",
+        "logo": "https://larviralata.com.br/og.jpg",
+        "image": "https://larviralata.com.br/og.jpg",
         "description": "Casal que mantém, com recursos próprios, 18 cães e gatos resgatados da rua, do abandono e de maus-tratos. Não é ONG e os animais não estão disponíveis para adoção."
       }
     ]
@@ -139,7 +139,12 @@
       <div class="cont">
         <h2>Dia a dia no lar</h2>
         <p class="sub">Soneca, bagunça e muito colo. É para isso que sua ajuda vai. Toque numa foto para ampliar.</p>
-        <div class="mural" id="muralGrade"></div>
+        <div class="carrossel">
+          <button class="car-seta car-ant" id="carAnt" aria-label="Fotos anteriores">‹</button>
+          <div class="mural" id="muralGrade"></div>
+          <button class="car-seta car-prox" id="carProx" aria-label="Próximas fotos">›</button>
+          <p class="car-info" id="carInfo"></p>
+        </div>
       </div>
     </section>
 
