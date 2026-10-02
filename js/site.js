@@ -248,23 +248,43 @@
   desenharQR();
 
   function copiar(texto, msg) {
-    const feito = () => aviso(msg);
+    const ok = () => { esconderManual(); aviso(msg); };
+    const falhou = () => mostrarManual(texto);
+    const velho = () => (copiarVelho(texto) ? ok() : falhou());
     if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(texto).then(feito, () => copiarVelho(texto, feito));
+      navigator.clipboard.writeText(texto).then(ok, velho);
     } else {
-      copiarVelho(texto, feito);
+      velho();
     }
   }
-  function copiarVelho(texto, feito) {
+  // método antigo (celulares/navegadores de app); devolve true só se realmente copiou
+  function copiarVelho(texto) {
     const t = document.createElement("textarea");
     t.value = texto;
-    t.style.position = "fixed";
-    t.style.opacity = "0";
+    t.setAttribute("readonly", "");
+    t.style.cssText = "position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;font-size:16px";
     document.body.appendChild(t);
+    t.focus();
     t.select();
-    try { document.execCommand("copy"); feito(); } catch (_) { /* nada */ }
+    t.setSelectionRange(0, texto.length);
+    let copiou = false;
+    try { copiou = document.execCommand("copy"); } catch (_) { copiou = false; }
     t.remove();
+    return copiou;
   }
+
+  // se nada funcionar, mostra o texto já selecionado para copiar na mão
+  const manual = $("#pixManual");
+  const manualAviso = $("#pixManualAviso");
+  function mostrarManual(texto) {
+    manual.value = texto;
+    manual.hidden = manualAviso.hidden = false;
+    manual.focus();
+    manual.select();
+    manual.setSelectionRange(0, texto.length);
+    aviso("Não consegui copiar sozinho. Segure no texto abaixo e toque em Copiar.");
+  }
+  function esconderManual() { manual.hidden = manualAviso.hidden = true; }
 
   $("#copiarCodigo").addEventListener("click", () =>
     copiar(pixPayload(valorAtual), "Código Pix copiado! Cole no app do banco 💛")

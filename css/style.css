@@ -409,3 +409,7 @@ body { overflow-x: hidden; }
 .cartao-artigo.destaque > img { height: 260px; aspect-ratio: auto; object-position: 50% 50%; }
 .cartao-img { height: 200px; aspect-ratio: auto; }
 @media (max-width: 800px) { .cartao-artigo.destaque > img { height: 220px; } }
+
+.pix-chave { user-select: all; -webkit-user-select: all; }
+.pix-manual-aviso { margin: 14px 0 6px; font-weight: 800; font-size: .9rem; text-align: center; }
+.pix-manual { width: 100%; padding: 10px; border: 2px solid var(--tinta); border-radius: 12px; background: var(--creme); font: 600 .85rem/1.4 monospace; color: var(--tinta); resize: none; word-break: break-all; }
