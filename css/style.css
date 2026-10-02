@@ -324,3 +324,37 @@ body { overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- artigos ---------- */
+.artigos-sec { padding: 0 0 88px; }
+.lista-artigos { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; margin-top: 24px; }
+.cartao-artigo {
+  display: block; padding: 24px; background: var(--branco); text-decoration: none;
+  border: 2px solid var(--tinta); border-radius: var(--raio); box-shadow: 5px 5px 0 var(--tinta);
+  transition: transform .15s, box-shadow .15s;
+}
+.cartao-artigo:hover, .cartao-artigo:focus-visible { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--amarelo-forte); outline: none; }
+.cartao-artigo h3 { font-size: 1.5rem; margin: 6px 0 10px; }
+.cartao-artigo p { margin: 0; color: var(--tinta-suave); }
+.etiqueta { display: inline-block; padding: .2em .8em; background: var(--amarelo); border-radius: 999px; font-weight: 800; font-size: .8rem; }
+.artigo { padding: 56px 0 72px; }
+.artigo h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; letter-spacing: -.01em; }
+.artigo h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); margin-top: 1.8em; }
+.artigo p, .artigo li { font-size: 1.1rem; }
+.artigo li { margin-bottom: .4em; }
+.artigo .meta { color: var(--tinta-suave); font-weight: 700; font-size: .95rem; }
+.migalhas { font-size: .9rem; font-weight: 700; margin: 0 0 18px; }
+.migalhas a { color: var(--tinta-suave); }
+.resumo { background: var(--amarelo-claro); border: 2px solid var(--tinta); border-radius: var(--raio); padding: 18px 22px; margin: 24px 0; }
+.resumo p, .resumo ul { margin: 0; }
+.resumo strong { font-family: var(--titulo); font-size: 1.2rem; }
+.alerta { background: var(--branco); border: 2px solid var(--tinta); border-left-width: 10px; border-radius: 14px; padding: 14px 18px; margin: 22px 0; }
+.alerta p { margin: 0; }
+.tabela-rolagem { overflow-x: auto; margin: 18px 0; }
+.artigo table { border-collapse: collapse; width: 100%; background: var(--branco); }
+.artigo th, .artigo td { border: 2px solid var(--tinta); padding: .6em .8em; text-align: left; font-size: 1rem; }
+.artigo th { background: var(--amarelo); }
+.artigo details { background: var(--branco); border: 2px solid var(--tinta); border-radius: 14px; padding: 12px 18px; margin: 10px 0; }
+.artigo summary { font-weight: 800; cursor: pointer; }
+.cta-artigo { margin-top: 48px; padding: 28px; background: var(--amarelo); border: 2px solid var(--tinta); border-radius: var(--raio); box-shadow: 6px 6px 0 var(--tinta); }
+.cta-artigo h2 { margin-top: 0; font-size: 1.8rem; }

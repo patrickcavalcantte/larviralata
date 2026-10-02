@@ -1,0 +1,10 @@
+# Lar Vira-Lata
+
+> Casal que mantém, com recursos próprios, 18 cães e gatos resgatados da rua, do abandono e de maus-tratos. Não é ONG; os animais não estão para adoção. O site recebe apoio mensal via Pix e publica guias práticos sobre resgate e cuidado de animais.
+
+## Páginas
+- [Início](https://patrickcavalcantte.github.io/larviralata/): quem somos, galeria de fotos e como apoiar
+- [Artigos](https://patrickcavalcantte.github.io/larviralata/artigos/): guias práticos
+
+## Artigos
+- [Como cuidar de um gatinho recém-nascido sem mãe](https://patrickcavalcantte.github.io/larviralata/artigos/como-cuidar-de-gatinho-recem-nascido-sem-mae.html): aquecimento, leite correto, mamadas, estímulo de xixi e cocô, peso e sinais de alerta
