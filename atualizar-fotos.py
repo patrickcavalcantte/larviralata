@@ -10,6 +10,9 @@ from PIL import Image, ImageOps
 
 RAIZ = Path(__file__).parent
 ORIG = RAIZ / "fotos"
+# fotos fixadas no começo da galeria, nesta ordem (nome do arquivo, com .jpg)
+DESTAQUES = ["20260415_111054.jpg"]
+
 WEB = ORIG / "web"
 MINI = WEB / "mini"
 EXT = {".jpg", ".jpeg", ".png", ".webp"}
@@ -37,8 +40,10 @@ for f in sorted(ORIG.iterdir()):
     reduzir(img, 1600, WEB / destino, 82)
     reduzir(img, 700, MINI / destino, 78)
 
-# mais recentes primeiro (os nomes começam com a data)
+# destaques primeiro; depois as mais recentes (os nomes começam com a data)
 nomes.sort(reverse=True)
+fixas = [n for n in DESTAQUES if n in nomes]
+nomes = fixas + [n for n in nomes if n not in fixas]
 linhas = ",\n".join(f'  "fotos/web/{n}"' for n in nomes)
 (RAIZ / "js" / "fotos.js").write_text(
     "/* Gerado por atualizar-fotos.py — não precisa editar. */\n"
