@@ -1,7 +1,9 @@
 /* Gerado por atualizar-fotos.py — não precisa editar. */
 const FOTOS = [
+  "fotos/web/20251206_114059.jpg",
   "fotos/web/20260415_111054.jpg",
   "fotos/web/20261001_123429.jpg",
+  "fotos/web/20251109_165452.jpg",
   "fotos/web/20260930_112140.jpg",
   "fotos/web/20260928_121250.jpg",
   "fotos/web/20260928_121219.jpg",
