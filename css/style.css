@@ -394,7 +394,7 @@ body { overflow-x: hidden; }
 
 .foto-artigo { margin: 26px 0; }
 .foto-artigo img { width: 100%; height: auto; border: 2px solid var(--tinta); border-radius: var(--raio); box-shadow: 6px 6px 0 var(--tinta); }
-.foto-vertical img { max-width: 420px; margin: 0 auto; }
+.foto-vertical img { max-width: 400px; margin: 0 auto; }
 .foto-artigo figcaption { margin-top: 12px; text-align: center; font-size: .95rem; font-weight: 700; color: var(--tinta-suave); }
 
 .cartao-img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; border: 2px solid var(--tinta); margin-bottom: 14px; }
