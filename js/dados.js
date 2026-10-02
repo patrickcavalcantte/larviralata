@@ -9,7 +9,7 @@
    cidade: cidade do titular, sem acento (máx. 15 letras)
    valores: sugestões de apoio mensal em reais (0 = valor livre)          */
 const PIX = {
-  chave: "pixlarviralata",
+  chave: "larviralata@gmail.com",
   nome: "MARCELLA PEREIRA DA SILVA",
   cidade: "RIO DE JANEIRO",
   valores: [20, 50, 100, 0],
