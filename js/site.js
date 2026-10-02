@@ -46,6 +46,7 @@
   }
 
   /* ---------- números ---------- */
+  const norm = (s) => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   $("#nTotal").textContent = TOTAL_ANIMAIS;
   document.querySelectorAll(".n-esp").forEach((d) => (d.hidden = true));
   $(".n-fotos").hidden = false;
